@@ -24,3 +24,9 @@ export function groupBy(array, key) {
     return { ...group, [keyValue]: [...(group[keyValue] ?? []), element] }
   }, {})
 }
+
+export function range( n, arr = [] ) {
+  if ( n < 0 ) return arr.reverse()
+  arr.push( n )
+  return range( n - 1, arr )
+}

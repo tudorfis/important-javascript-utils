@@ -1,5 +1,5 @@
 const CURRENCY_FORMATTER = new Intl.NumberFormat(undefined, {
-  currency: "USD",
+  currency: "EUR",
   style: "currency",
 })
 export function formatCurrency(number) {
@@ -27,7 +27,7 @@ const DIVISIONS = [
   { amount: 12, name: "months" },
   { amount: Number.POSITIVE_INFINITY, name: "years" },
 ]
-const RELATIVE_DATE_FORMATTER = new Intl.RelativeTimeFormat(undefined, {
+const RELATIVE_DATE_FORMATTER = new Intl.RelativeTimeFormat('ro-RO', {
   numeric: "auto",
 })
 export function formatRelativeDate(toDate, fromDate = new Date()) {
